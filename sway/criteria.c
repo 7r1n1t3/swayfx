@@ -43,7 +43,7 @@ bool criteria_is_empty(struct criteria *criteria) {
 
 // The error pointer is used for parsing functions, and saves having to pass it
 // as an argument in several places.
-char *error = NULL;
+static char *error = NULL;
 
 // Returns error string on failure or NULL otherwise.
 static bool generate_regex(pcre2_code **regex, char *value) {
